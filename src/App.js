@@ -32,18 +32,20 @@ const App = () => {
   }, []);
 
   return (
-    <div className="container mx-auto p-4 ">
-      <h1 className="text-6xl font-semibold mt-5 mb-4 text-center text-indigo-900">
-        To-Do-List
-      </h1>
-      <AddTodo fetchTodos={fetchTodos} />
-      <TodoList todos={todos} fetchTodos={fetchTodos} />
-      <button
-        onClick={deleteAllTodos}
-        className="mt-4 bg-red-600 text-white px-4 py-2 rounded"
-      >
-        Delete All
-      </button>
+    <div className="flex items-center justify-center min-h-screen ">
+      <div className="container mx-auto p-4 bg-white shadow-lg rounded-md w-full max-w-lg">
+        <h1 className="text-6xl font-semibold mt-5 mb-4 text-center text-indigo-900">
+          To-Do-List
+        </h1>
+        <AddTodo fetchTodos={fetchTodos} />
+        <TodoList todos={todos} fetchTodos={fetchTodos} />
+        <button
+          onClick={deleteAllTodos}
+          className="mt-4 bg-red-600 text-white px-4 py-2 rounded"
+        >
+          Delete All
+        </button>
+      </div>
     </div>
   );
 };
